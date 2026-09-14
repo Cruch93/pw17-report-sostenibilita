@@ -47,7 +47,7 @@ Per visualizzare la pagina web è possibile aprire il file `index.html` con un q
 
 In alternativa, il progetto è consultabile online tramite il seguente link:
 
-**GitHub Pages:** [inserire link]
+**GitHub Pages:** [https://cruch93.github.io/pw17-report-sostenibilita/]
 
 
 ## Fonti e crediti
