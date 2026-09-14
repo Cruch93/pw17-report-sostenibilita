@@ -4,7 +4,7 @@
 
 **Traccia del PW 17: Sviluppo di una pagina web per il download dei report di sostenibilità di un’impresa del settore primario**
 
-L’azienda scelta è Fasoli Gino, azienda vitivinicola del territorio veronese molto attenta alla sostenibilità del territorio.
+L’azienda scelta è **Fasoli Gino**, azienda vitivinicola del territorio veronese molto attenta alla sostenibilità del territorio.
 
 La pagina ha lo scopo di rappresentare le principali attività dell’azienda in termini di sostenibilità e offre la possibilità di scaricare facilmente i relativi report.
 
