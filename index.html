@@ -2,25 +2,24 @@
 <html lang="it">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Permette alla pagina di adattarsi correttamente alla larghezza dello schermo, soprattutto su smartphone e tablet -->
-    <title>Fasoli Gino | Report di sostenibilità</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8"> <!-- Imposta la codifica UTF-8, permettendo la corretta visualizzazione di lettere accentate e caratteri speciali -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adatta la larghezza della pagina a quella dello schermo del dispositivo, facilitando il responsive design -->
+    <title>Fasoli Gino | Report di sostenibilità</title> 
+    <link rel="stylesheet" href="css/style.css"> <!-- Collega il documento HTML al foglio di stile CSS esterno -->
 </head>
 
-<body id="home">
+<body id="home"> <!-- Definisce il punto "home" della pagina, usato dal logo per tornare all'inizio -->
 
 
 
     <header>
 
         <h1>
-            <a href="#home" class="logo-link">
-                <img src="img/logo.svg" alt="Fasoli Gino">
+            <a href="#home" class="logo-link"> <!-- Collegamento interno alla home -->
+                <img src="img/logo.svg" alt="Fasoli Gino"> <!-- Logo aziendale con testo alternativo per l'accessibilità -->
             </a>
         </h1>
-        <nav> <!-- link del menù di navigazione -->
+        <nav> <!-- Contiene i link del menu di navigazione -->
 
             <ul> <!--lista delle voci del menù-->
                 <li>
@@ -58,7 +57,7 @@
     </header>
 
     <main>
-        <section id="introduzione" class="hero"> <!--sezione introduttiva della pagina--> <!--sezione classe Hero-->
+        <section id="introduzione" class="hero"> <!--sezione introduttiva della pagina-->
             <h2>COLTIVARE IL FUTURO</h2>
             <p>
                 Dalla terra al vino, un percorso di
@@ -66,9 +65,9 @@
                 biodiversità e attenzione al territorio.
             </p>
 
-            <div class="badge-certificazioni">
+            <div class="badge-certificazioni"> <!-- Contenitore dei badge relativi alle certificazioni -->
 
-                <a href="#certificazione-equalitas">
+                <a href="#certificazione-equalitas"> <!-- Collegamento interno alla sezione dedicata alla certificazione Equalitas -->
                     <img src="img/equalitas.png" alt="Equalitas">
                     <span>Organizzazione sostenibile</span>
                 </a>
@@ -95,9 +94,9 @@
                 il metodo biologico e le pratiche di vinificazione vegana.
             </p>
 
-            <div class="griglia-certificazioni">
+            <div class="griglia-certificazioni"> <!-- Contenitore delle card dedicate alle diverse certificazioni -->
 
-                <article id="certificazione-equalitas" class="card-certificazione">
+                <article id="certificazione-equalitas" class="card-certificazione">  <!-- Card dedicata alla certificazione Equalitas; l'id consente il collegamento diretto dalla hero -->
                     <h3>Equalitas</h3>
 
                     <p>
@@ -218,9 +217,9 @@
         </section>
 
         <section id="territorio" class="sezione-base sezione-territorio"> <!--sezione Territorio e Biodiversità-->
-            <div class="blocco-territorio">
+            <div class="blocco-territorio"> <!-- Contenitore dell'immagine e del contenuto testuale -->
                 <img src="img/le_cave_2.jpg" alt="Tenuta Le Cave e il territorio circostante">
-                <div class="contenuto-territorio">
+                <div class="contenuto-territorio">  <!-- Contenuto testuale relativo a Tenuta Le Cave e al territorio -->
 
                     <h2>Territorio e biodiversità</h2>
                     <p class="intro-sezione">
@@ -257,7 +256,7 @@
             </div>
         </section>
 
-        <section id="iniziative" class="sezione-base sezione-iniziative">
+        <section id="iniziative" class="sezione-base sezione-iniziative"> <!--sezione iniziative-->
 
             <h2>Iniziative per il territorio e la comunità</h2>
 
@@ -266,9 +265,9 @@
                 tra Fasoli Gino, il territorio e la sostenibilità.
             </p>
 
-            <div class="griglia-iniziative">
+            <div class="griglia-iniziative"> <!-- Contenitore delle card dedicate alle diverse iniziative -->
 
-                <article class="iniziativa-foto">
+                <article class="iniziativa-foto"> <!-- Card con immagine e descrizione dell'iniziativa "100 alberi per i 100 anni" -->
                     <img src="img/100-alberi.jpg" alt="Iniziativa 100 alberi per i 100 anni">
 
                     <div class="contenuto-iniziativa">
@@ -321,7 +320,7 @@
                 il consumo di energia elettrica.
             </p>
 
-            <div class="contenitore-tabella"> <!-- Permetterà di gestire la tabella anche su schermi piccoli -->
+            <div class="contenitore-tabella"> <!-- Contenitore che consente lo scorrimento orizzontale della tabella su schermi piccoli -->
 
                 <table>
 
@@ -329,9 +328,9 @@
                         Consumi e produzione dell'Azienda Agricola Fasoli Gino dal 2021 al 2025
                     </caption>
 
-                    <thead>
+                    <thead> <!-- Intestazione della tabella -->
                         <tr>
-                            <th scope="col">Indicatore</th>
+                            <th scope="col">Indicatore</th> <!-- "scope" associa correttamente le intestazioni alle colonne o alle righe -->
                             <th scope="col">2021</th>
                             <th scope="col">2022</th>
                             <th scope="col">2023</th>
@@ -340,7 +339,7 @@
                         </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody> <!-- Corpo della tabella con i valori dei diversi indicatori -->
 
                         <tr>
                             <th scope="row">Energia elettrica (kWh)</th>
@@ -412,12 +411,12 @@
 
                     <h3>Bilancio di sostenibilità 2025</h3>
 
-                    <a href="report/BILANCIO-DI-SOSTENIBILITA-2025-2.pdf" download class="link-immagine-report">
+                    <a href="report/BILANCIO-DI-SOSTENIBILITA-2025-2.pdf" download class="link-immagine-report"> <!-- L'attributo download permette di scaricare direttamente il file PDF -->
 
                         <img class="immagine-report" src="img/ultima-pagina-report-2025.png"
                             alt="Anteprima del Bilancio di sostenibilità 2025 di Fasoli Gino">
 
-                        <span class="overlay-download">
+                        <span class="overlay-download"> <!-- Testo sovrapposto all'anteprima del report -->
                             Scarica il report
                         </span>
 
@@ -432,7 +431,7 @@
                             sociali ed economici.
                         </p>
 
-                        <a href="report/BILANCIO-DI-SOSTENIBILITA-2025-2.pdf" download class="link-download-report">
+                        <a href="report/BILANCIO-DI-SOSTENIBILITA-2025-2.pdf" download class="link-download-report"> <!-- Collegamento testuale alternativo per il download del report -->
                             Scarica il report 2025
                         </a>
 
@@ -472,13 +471,9 @@
 
         </section>
 
-
-
-
-
     </main>
 
-    <footer>
+    <footer>  <!-- Il piè di pagina identifica il Project Work e la finalità didattica del sito. -->
 
         <p>
             Project Work -CdS Informatica per le Aziende Digitali (L-31)-
@@ -490,10 +485,6 @@
             pubblicati da Fasoli Gino.
         </p>
     </footer>
-
-
-
-
 </body>
 
 </html>
