@@ -7,15 +7,15 @@
     --bianco: #ffffff;
     --sfondo-card: rgba(255, 255, 255, 0.75);
 }
-
-body {
+/* Stile generale della pagina: rimuove i margini predefiniti e imposta font, leggibilità e colori di base */
+body {  
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     color: var(--testo);
     background-color: var(--sfondo);
 }
-
+/* Lascia spazio sopra le destinazioni delle ancore; non aggiunge margine al normale layout. */
 section {
     scroll-margin-top: 120px;
 }
@@ -23,9 +23,9 @@ section {
 /* =========================
     HEADER E NAVIGAZIONE
    ========================= */
-
+/* Mantiene l'header visibile in alto durante lo scorrimento; z-index evita che venga coperto dagli altri contenuti. */
 header {
-    background-color: var(--verde);
+    background-color: var(--verde); 
     color: var(--bianco);
     padding: 20px 40px;
 
@@ -49,11 +49,11 @@ header h1 {
     height: auto;
     transition: transform 0.3s;
 }
-
+/* Ingrandisce leggermente il logo al passaggio del mouse */
 .logo-link:hover img {
     transform: scale(1.05);
 }
-
+/* Dispone orizzontalmente le voci del menu e le centra */
 nav ul {
     margin: 0;
     padding: 0;
@@ -62,7 +62,7 @@ nav ul {
     justify-content: center;
     gap: 80px;
 }
-
+/* Imposta l'aspetto dei link del menu e rende graduale il cambio di colore durante l'hover */
 nav a {
     color: var(--bianco);
     text-decoration: none;
@@ -81,13 +81,13 @@ nav a:hover {
    ========================= */
 
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.45)), url("../img/vigneto.webp");
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.45)), url("../img/vigneto.webp");/* Sovrappone una sfumatura scura alla foto di sfondo */
+    background-size: cover; /* Fa in modo che l'immagine riempia tutta l'area, anche se può essere parzialmente ritagliata */
+    background-position: center; /* Mantiene centrata l'immagine di sfondo */
+    min-height: 100vh; /* Imposta un'altezza minima pari all'altezza della viewport */
+    box-sizing: border-box; /* Include padding e bordi nel calcolo delle dimensioni dell'elemento */
+    display: flex; /* Attiva Flexbox per organizzare i contenuti della sezione */
+    flex-direction: column; /* Dispone i contenuti in verticale */
     justify-content: center;
     padding: 80px 40px 160px;
     color: var(--bianco);
@@ -114,9 +114,9 @@ nav a:hover {
 /* BADGE NELLA HERO */
 
 .badge-certificazioni {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: flex; /* Dispone i badge tramite Flexbox */
+    justify-content: space-between; /* Distribuisce i badge lasciando spazio tra gli elementi */
+    flex-wrap: wrap; /* Permette ai badge di andare a capo se lo spazio non è sufficiente */
     gap: 30px;
 
     width: 100%;
@@ -145,16 +145,16 @@ nav a:hover {
 .badge-certificazioni img {
     width: 105px;
     height: 80px;
-    object-fit: contain;
+    object-fit: contain;  /* Mantiene il logo intero nel riquadro, senza deformarlo né ritagliarlo */
 }
 
 .badge-certificazioni a:hover span {
-    text-decoration: underline;
+    text-decoration: underline; /* Sottolinea il testo del badge al passaggio del mouse */
 }
 
 .badge-certificazioni a:focus-visible {
-    outline: 3px solid var(--bianco);
-    outline-offset: 5px;
+    outline: 3px solid var(--bianco); /* Evidenzia il collegamento quando riceve il focus da tastiera */
+    outline-offset: 5px; /* Distanzia il contorno dall'elemento per renderlo più visibile */
 }
 
 /* =========================
@@ -180,11 +180,11 @@ nav a:hover {
 }
 
 .griglia-certificazioni {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: 0 auto;
+    display: grid; /* Attiva CSS Grid per organizzare le card */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Crea tre colonne della stessa larghezza */
+    gap: 25px; /* Imposta lo spazio tra le card */
+    max-width: 1100px; /* Limita la larghezza massima della griglia */
+    margin: 0 auto; /* Centra orizzontalmente la griglia */
 }
 
 .card-certificazione {
@@ -201,7 +201,7 @@ nav a:hover {
     color: var(--verde);
     font-size: 24px;
 }
-
+/* Evidenzia la card il cui id corrisponde all’ancora presente nell’indirizzo della pagina. */
 .card-certificazione:target {
     outline: 3px solid var(--bordeaux);
     outline-offset: 4px;
@@ -211,7 +211,7 @@ nav a:hover {
 /* =========================
              KPI
    ========================= */
-
+/* Applica regole specifiche agli elementi che possiedono sia "sezione-base" sia "sezione-kpi" */
 .sezione-base.sezione-kpi {
     text-align: center;
     min-height: auto;
@@ -235,11 +235,11 @@ nav a:hover {
     font-size: 32px;
 }
 
-.sezione-kpi>p {
+.sezione-kpi>p { /* Seleziona solo i paragrafi figli diretti della sezione KPI */
     max-width: 750px;
     margin: 0 auto 40px;
 }
-
+/* La griglia KPI usa Flexbox; flex: 1 sulle card distribuisce in modo uniforme lo spazio disponibile. */
 .griglia-kpi {
     display: flex;
     justify-content: center;
@@ -258,7 +258,7 @@ nav a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
+/* Ingrandimento visivo e ombra al passaggio del mouse; transition rende graduale il cambiamento. */
 .card-kpi:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
@@ -306,7 +306,7 @@ nav a:hover {
     margin: 0 auto 40px;
     text-align: center;
 }
-
+/* Grid dispone le quattro card in due colonne uguali; gap separa righe e colonne. */
 .griglia-sostenibilita {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -342,7 +342,7 @@ nav a:hover {
 #territorio {
     scroll-margin-top: 200px;
 }
-
+/* Due colonne con rapporto 1.4 a 1: alla foto è riservata una quota maggiore dello spazio. */
 .blocco-territorio {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
@@ -356,10 +356,10 @@ nav a:hover {
 .blocco-territorio img {
     width: 90%;
     height: 90%;
-    object-fit: cover;
-    border-radius: 0 40px 40px 0;
-
+    object-fit: cover; /* Cover riempie il riquadro mantenendo le proporzioni; eventuali parti eccedenti sono ritagliate. */
+    border-radius: 0 40px 40px 0; /* Arrotonda solo gli angoli superiore destro e inferiore destro */
 }
+
 
 .contenuto-territorio {
     display: flex;
@@ -376,7 +376,7 @@ nav a:hover {
     font-size: 32px;
 }
 
-.contenuto-territorio>p:first-of-type {
+.contenuto-territorio>p:first-of-type { /* Seleziona il primo paragrafo figlio diretto, senza coinvolgere quelli dentro la card. */
     font-weight: bolder;
     text-align: center;
 }
@@ -427,13 +427,14 @@ nav a:hover {
 }
 
 .griglia-iniziative {
-    display: grid;
+    display: grid; /* Grid organizza le card delle iniziative in tre colonne uguali. */
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
 }
-
+/* Relative crea il riferimento per gli elementi posizionati in modo assoluto;
+   overflow nasconde le parti che superano i bordi arrotondati della card. */
 .iniziativa-foto {
     position: relative;
     height: 400px;
@@ -449,11 +450,11 @@ nav a:hover {
     display: block;
     transition: transform 0.4s;
 }
-
+/* Ingrandisce leggermente l'immagine al passaggio del mouse */
 .iniziativa-foto:hover img {
     transform: scale(1.05);
 }
-
+/* Posiziona il contenuto testuale nella parte inferiore della card, sopra l'immagine. */
 .contenuto-iniziativa {
     position: absolute;
     left: 0;
@@ -462,7 +463,7 @@ nav a:hover {
     padding: 60px 25px 25px;
     color: var(--bianco);
     background: linear-gradient(transparent,
-            rgba(0, 0, 0, 0.85));
+            rgba(0, 0, 0, 0.85)); /* Crea una sfumatura scura per migliorare la leggibilità del testo sull'immagine */
 }
 
 .contenuto-iniziativa h3 {
@@ -502,7 +503,7 @@ nav a:hover {
     /* permetto lo scorrimento orizzontale su schermi piccoli*/
 
 }
-
+/* La tabella occupa la larghezza disponibile e unisce i bordi delle celle adiacenti. */
 .contenitore-tabella table {
     width: 100%;
     border-collapse: collapse;
@@ -531,7 +532,7 @@ nav a:hover {
     font-weight: bold;
     font-size: 18px;
 }
-
+/* :last-child seleziona l'ultima cella di ogni riga del corpo della tabella, corrispondente ai dati del 2025. */
 .contenitore-tabella tbody td:last-child {
     font-weight: bold;
 }
@@ -590,9 +591,9 @@ nav a:hover {
 }
 
 
-/* Report principale 2025 */
+/* La card principale del report 2025 si estende verticalmente su due righe della griglia. */
 .report-principale {
-    grid-row: 1 / 3;
+    grid-row: 1 / 3; 
     text-align: center;
     padding: 25px;
     border-top-color: var(--bordeaux);
@@ -610,14 +611,13 @@ nav a:hover {
 }
 
 
-/* Link che contiene immagine + overlay */
+/* Contenitore cliccabile dell'anteprima del report e dell'overlay di download. */
 .link-immagine-report {
-    position: relative;
-    display: block;
-
+    position: relative; /* Fa da riferimento per il posizionamento assoluto dell'overlay */
+    display: block; /* Trasforma il link in un blocco, rendendo ben definita l'area cliccabile dell'anteprima */
     margin: 15px 0 12px;
 
-    overflow: hidden;
+    overflow: hidden; /* Nasconde le parti che superano i bordi arrotondati */
     border-radius: 6px;
 }
 
@@ -633,10 +633,10 @@ nav a:hover {
 }
 
 
-/* Scritta che compare sopra l'immagine */
+/* L'overlay copre tutta l'anteprima del report ed è inizialmente nascosto; viene mostrato durante l'hover. */
 .overlay-download {
     position: absolute;
-    inset: 0;
+    inset: 0; /* Estende l'overlay su tutti i lati del contenitore di riferimento */
 
     display: flex;
     align-items: flex-end;
@@ -649,23 +649,23 @@ nav a:hover {
     font-size: 22px;
     font-weight: bold;
 
-    opacity: 0;
+    opacity: 0; /* Rende l'overlay invisibile finché non viene attivato */
 
     transition: opacity 0.3s;
 }
 
 
-/* Effetto hover sulla foto */
+/* Al passaggio del mouse l'immagine viene leggermente ingrandita. */
 .link-immagine-report:hover .immagine-report {
     transform: scale(1.03);
 }
-
+/* Durante l'hover rende visibile l'overlay con il comando di download. */
 .link-immagine-report:hover .overlay-download {
     opacity: 1;
 }
 
 
-/* Parte testuale del report 2025 */
+/* Organizza verticalmente il testo e il link di download del report 2025. */
 .testo-report {
     display: flex;
     flex-direction: column;
@@ -685,7 +685,7 @@ nav a:hover {
 
 
 /* Card 2024 e 2023 */
-.card-report:not(.report-principale) {
+.card-report:not(.report-principale) { /* :not esclude la card principale e applica queste regole alle altre card dei report. */
     justify-content: center;
     text-align: center;
     min-height: 140px;
@@ -710,11 +710,11 @@ nav a:hover {
     opacity: 1;
 }
 
-/* Pulsanti download 2024 e 2023 */
+/* Collegamenti dei report precedenti stilizzati come pulsanti */
 .card-report:not(.report-principale) a {
-    display: inline-block;
+    display: inline-block; /* Permette al link di gestire meglio padding e dimensioni */
 
-    margin-top: auto;
+    margin-top: auto; /* In una card Flexbox spinge il link verso il fondo */
     padding: 10px 16px;
 
     background-color: var(--verde);
@@ -728,7 +728,7 @@ nav a:hover {
 
     transition: background-color 0.3s;
 }
-
+/* Cambia il colore del pulsante al passaggio del mouse. */
 .card-report:not(.report-principale) a:hover {
     background-color: var(--bordeaux);
 }
@@ -760,20 +760,19 @@ footer p:last-child {
 /* =========================
    RESPONSIVE: NAVIGAZIONE
    ========================= */
-
+/* Regole responsive applicate quando la larghezza dello schermo è pari o inferiore a 1100px */
 @media (max-width: 1100px) {
     header {
         padding: 15px 20px;
     }
 
     nav ul {
-        flex-wrap: wrap;
-        /* permesso di andare a capo */
+        flex-wrap: wrap;/* Permette alle voci del menu di andare a capo su più righe */
         gap: 8px 24px;
     }
 
     nav a {
-        display: block;
+        display: block; /* Fa occupare al link una propria area rettangolare */
         padding: 8px 4px;
     }
 }
@@ -796,14 +795,14 @@ footer p:last-child {
     section,
     #territorio,
     .card-certificazione {
-        scroll-margin-top: 20px;
+        scroll-margin-top: 20px; /* Lascia spazio sopra l'elemento quando viene raggiunto tramite un link interno */
     }
 }
 
 /* =========================
    RESPONSIVE: HERO CERT. E KPI
    ========================= */
-
+/* Entro 800px si riducono spazi e testi e si dispongono certificazioni e KPI in una colonna. */
 @media (max-width: 800px) {
     .hero {
         min-height: auto;
@@ -844,7 +843,7 @@ footer p:last-child {
         gap: 20px;
     }
 }
-
+/* Adatta dimensioni di testi, badge e loghi della hero agli schermi più piccoli */
 @media (max-width: 600px) {
     .hero h2 {
         font-size: 30px;
@@ -872,7 +871,8 @@ footer p:last-child {
 }
 
 /* RESPONSIVE: TERRITORIO */
-
+/* Su schermi più stretti la sezione territorio passa a una sola colonna.
+   La proprietà order modifica l'ordine visivo degli elementi senza cambiare l'HTML. */
 @media (max-width: 1000px) {
     .blocco-territorio {
         grid-template-columns: 1fr;
@@ -881,11 +881,11 @@ footer p:last-child {
     }
 
     .blocco-territorio img {
-        order: 2;
+        order: 2; /* Sposta visivamente l'immagine dopo il testo */
     }
 
     .contenuto-territorio {
-        order: 1;
+        order: 1; /* Mantiene il contenuto testuale prima dell'immagine */
     }
 
     .blocco-territorio img {
@@ -919,14 +919,14 @@ footer p:last-child {
     .griglia-sostenibilita,
     .griglia-iniziative,
     .griglia-report {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr); /* Porta le griglie a una sola colonna */
         gap: 25px;
     }
 
     .griglia-report {
         grid-template-rows: auto;
     }
-
+ /* Annulla l'occupazione di due righe prevista nel layout desktop */
     .report-principale {
         grid-row: auto;
     }
@@ -944,7 +944,7 @@ footer p:last-child {
     .iniziativa-foto img {
         height: 230px;
     }
-
+/* Il testo torna nel normale flusso della pagina, sotto l'immagine */
     .contenuto-iniziativa {
         position: static;
         padding: 20px;
